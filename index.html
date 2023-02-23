@@ -10,14 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <link rel="stylesheet" href="CSS/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <img class="logo" alt="logo MJWood" src="../images/logo.png">
+            <img class="logo" alt="logo MJWood" src="images/logo.png">
             <button class="burger">
                 <i class="fas fa-bars"></i>
                 <i class="fas fa-times hide"></i>
@@ -25,8 +25,8 @@
             <ul>
                 <li><a class="link" href='#aboutUs'>O NAS</a></li>
                 <li><a class="link" href='#offer'>OFERTA</a></li>
-                <li><a  class="link"href="#">Hurtownia</a></li>
-                <li><a class="link" href="#">KONTAKT</a></li>
+                <li><a class="link" href="#">HURTOWNIA</a></li>
+                <li><a class="link" href="#contact">KONTAKT</a></li>
             </ul>
 
         </nav>
@@ -45,7 +45,10 @@
     <section class="main">
         <div class="conteiner">
             <h2 id="aboutUs">O NAS</h2>
-            <p class="pAboutUs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eaque eligendi corporis sit eos facilis magni neque blanditiis fugiat nobis, modi labore esse magnam ducimus reprehenderit laborum inventore maxime dolor obcaecati autem tenetur at quia recusandae! Neque culpa voluptatibus, ab impedit, libero iusto in tempore alias mollitia, est accusamus iure.</p>
+            <p class="pAboutUs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt eaque eligendi
+                corporis sit eos facilis magni neque blanditiis fugiat nobis, modi labore esse magnam ducimus
+                reprehenderit laborum inventore maxime dolor obcaecati autem tenetur at quia recusandae! Neque culpa
+                voluptatibus, ab impedit, libero iusto in tempore alias mollitia, est accusamus iure.</p>
         </div>
         <div class="oferta">
             <div class="aboutOfer">
@@ -56,20 +59,56 @@
 
             <div class="slider">
                 <div class="slider-box">
-                    <img src="../images/photo1.JPG" alt="Zdjęcie drewnianego tarasu" class="slider-img">
-                    <img src="../images/photo2.JPG" alt="Zdjęcie drewnianego zestawu ogrodniczego do siedzenia"
+                    <img src="images/photo1.JPG" alt="Zdjęcie drewnianego tarasu" class="slider-img">
+                    <img src="images/photo2.JPG" alt="Zdjęcie drewnianego zestawu ogrodniczego do siedzenia"
                         class="slider-img">
-                    <img src="../images/photo3.JPG" alt="Zdjęćie balii wieczorem ze światełkami" class="slider-img">
-                    <img src="../images/photo4.JPG" alt="Zdjęcie drewnianego tarasu w budowie" class="slider-img">
-                    <img src="../images/photo5.JPG" alt="Zdjęcie drewnianego tarasu wraz z drewnianym szkieletem"
+                    <img src="images/photo3.JPG" alt="Zdjęćie balii wieczorem ze światełkami" class="slider-img">
+                    <img src="images/photo4.JPG" alt="Zdjęcie drewnianego tarasu w budowie" class="slider-img">
+                    <img src="images/photo5.JPG" alt="Zdjęcie drewnianego tarasu wraz z drewnianym szkieletem"
                         class="slider-img">
-                    <img src="../images/photo6.JPG" alt="Zdjęcie drewnianej sauny" class="slider-img">
+                    <img src="images/photo6.JPG" alt="Zdjęcie drewnianej sauny" class="slider-img">
 
                 </div>
                 <button class="btn btn-left"><span>&lt;</span></button>
                 <button class="btn btn-right"><span>&gt;</span></button>
 
             </div>
+        </div>
+        <div class="contact">
+            <h4 id="contact" class="contaktHeader">KONTAKT</h4>
+            <p class="contactP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, amet.</p>
+            <form action="send_email.php" method="post">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name">
+
+                <label for="email">Adres email:</label>
+                <input class="emailInput" type="email" id="email" name="email">
+
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <input class="sendBtn" type="submit" value="Wyślij">
+            </form>
+        </div>
+
+
+    </section>
+    <section class="footer">
+        <div class="footerNav">
+            <ul>
+                <li><a class="footerLinks" href='#aboutUs'>O NAS</a></li>
+                <li><a class="footerLinks" href='#offer'>OFERTA</a></li>
+                <li><a class="footerLinks" href="#">HURTOWNIA</a></li>
+                <li><a class="footerLinks" href="#contact">KONTAKT</a></li>
+            </ul>
+
+        </div>
+        <div class="references">
+            <a href="https://www.facebook.com/baniawogrodzie" rel="noopener noreferrer"><i
+                    class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/mj_woodtg/" rel="noopener noreferrer"><i
+                    class="fa-brands fa-instagram"></i></a>
+        </div>
     </section>
     <script src="app.js"></script>
 </body>

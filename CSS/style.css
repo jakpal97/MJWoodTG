@@ -74,6 +74,7 @@
 		margin-bottom: 40px;
 		font-size: 1rem;
 		font-weight: 500;
+		margin-left: 10px;
 	}
 	.btnA {
 		text-decoration: none;
@@ -157,12 +158,12 @@
 	}
 	.btn {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 40%;
+		transform: translateY(-40%);
 
 		padding: 0.1em 0.5em;
-		color: var(--color-four);
-		background-color: var(--color-three);
+		color: var(--color-one);
+		background-color: var(--color-four);
 		font-size: 1.2em;
 		border: none;
 		cursor: pointer;
@@ -185,6 +186,24 @@
 		color: var(--color-three);
 		font-weight: 500;
 	}
+	.main > div {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.oferta,
+	.contact,
+	.conteiner {
+		background-color: #f2f2f2;
+	}
+	.conteiner,
+	.contact {
+		padding: 20px;
+	}
+	.oferta {
+		padding-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 
 	.conteiner {
 		display: flex;
@@ -194,5 +213,104 @@
 	}
 	.pAboutUs {
 		margin: 0 10px;
+	}
+	h2 {
+		font-size: 2rem;
+	}
+	.aboutOfer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0 10px;
+		margin-top: 15px;
+	}
+	.ofer {
+		font-size: 2rem;
+	}
+	.oferParagraf {
+		margin: 10px 20px;
+		font-size: 1.2rem;
+		line-height: 1.5;
+	}
+	.contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	label {
+		display: block;
+	}
+
+	input[type='text'],
+	textarea,
+	.emailInput {
+		display: block;
+		width: 20rem;
+		padding: 5px;
+		border: 1px solid var(--color-four);
+		background-color: var(--color-one);
+		border-radius: 8px;
+		box-sizing: border-box;
+		color: var(--color-three);
+		font-weight: 500;
+		font-family: 'Poppins', sans-serif;
+	}
+	input[type='text'],
+	textarea,
+	.emailInput:focus {
+		outline: none;
+	}
+	.sendBtn {
+		margin-top: 15px;
+		margin-bottom: 20px;
+		padding: 0.7rem 1rem;
+		background-color: var(--color-three);
+		font-family: 'Poppins', sans-serif;
+		font-size: 1rem;
+		font-weight: 500;
+		border: 2px solid var(--color-three);
+		border-radius: 10000px;
+		color: var(--color-four);
+	}
+	.sendBtn:hover {
+		background-color: var(--color-four);
+		color: var(--color-three);
+	}
+	h4 {
+		font-size: 2rem;
+	}
+	.contactP {
+		margin-left: 10px;
+		margin-bottom: 15px;
+	}
+	.footer {
+		background-color: var(--color-three);
+		display: flex;
+		justify-content: space-around;
+	}
+	.footerNav ul li a {
+		list-style: none;
+		text-decoration: none;
+		color: var(--color-four);
+		list-style-type: none;
+	}
+	.footerNav ul {
+		list-style-type: none;
+		margin: 10px;
+	}
+	.references {
+		gap: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.fa-brands {
+		font-size: 2.5rem;
+		color: var(--color-four);
+	}
+	.fa-brands:hover {
+		transform: scale(1.2, 1.2);
 	}
 }
