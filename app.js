@@ -97,3 +97,23 @@ hammer.on('swiperight', function () {
 	currentSlide.classList.remove('active')
 	prevSlide.classList.add('active')
 })
+
+const navbar = document.querySelector('.navBar')
+const menu = document.querySelector('.menu')
+
+window.onscroll = function () {
+	if (window.pageYOffset >= menu.offsetTop) {
+		navbar.classList.add('sticky')
+	} else {
+		navbar.classList.remove('sticky')
+	}
+}
+
+const header = document.querySelector(".headerInfo");
+const images = ["../images/header2.jpg", "../images/header3.jpg" ];
+
+let i = 0;
+setInterval(() => {
+  header.style.backgroundImage = `url(images/${images[i]})`;
+  i = (i + 1) % images.length;
+}, 5000);

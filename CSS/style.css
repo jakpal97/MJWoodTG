@@ -85,10 +85,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-
+		justify-content: flex-start;
+		padding-top: 100px;
 		position: absolute;
-		height: 700px;
+		height: 600px;
 		width: 150px;
 		right: -150px;
 		font-weight: 500;
@@ -100,6 +100,9 @@
 	}
 	.link:hover {
 		border: 2px solid var(--color-three);
+	}
+	ul li {
+		padding-bottom: 10px;
 	}
 
 	nav a {
@@ -312,5 +315,102 @@
 	}
 	.fa-brands:hover {
 		transform: scale(1.2, 1.2);
+	}
+}
+@media (min-width: 390px) {
+	body {
+		background-color: var(--color-four);
+	}
+	header {
+		height: 100vh;
+		width: 100%;
+	}
+	nav {
+		display: flex;
+		flex-direction: column;
+
+		justify-content: center;
+		align-items: center;
+	}
+	nav ul {
+		display: flex;
+		width: 100%;
+		height: 60px;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		background-color: var(--color-four);
+
+		font-weight: 800;
+	}
+	nav button {
+		display: none;
+	}
+	.link {
+		padding: 15px;
+		text-decoration: none;
+		color: var(--color-three);
+	}
+	.logo {
+		mix-blend-mode: color-burn;
+	}
+	nav.sticky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 10px 8%;
+		background-color: var(--color-four);
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		transition: padding 1s;
+	}
+	.logo.sticky {
+		padding-left: 5px;
+	}
+	nav.sticky ul {
+		width: auto;
+	}
+	.headerInfo {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		background-image: url('../images/header1.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		color: var(--color-four);
+		padding-bottom: 30px;
+		padding-top: 60px;
+	}
+	.paragraf {
+		padding: 0 40px;
+		color: var(--color-four);
+	}
+	.btnInfo {
+		background-color: var(--color-three);
+		border: 2px solid var(--color-three);
+		border-radius: 10000px;
+		font-family: 'Poppins', sans-serif;
+		height: 45px;
+		padding: 10px 10px;
+		margin-top: 50px;
+		margin-bottom: 40px;
+		font-size: 1rem;
+		font-weight: 500;
+		margin-left: 10px;
+	}
+	.btnA {
+		text-decoration: none;
+		color: var(--color-four);
 	}
 }
