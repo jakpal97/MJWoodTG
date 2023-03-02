@@ -117,3 +117,20 @@ setInterval(() => {
   header.style.backgroundImage = `url(images/${images[i]})`;
   i = (i + 1) % images.length;
 }, 5000);
+
+
+
+
+
+// kod do desek
+
+const card= document.querySelectorAll('.card')
+
+function showCard(){
+	card.forEach(card=>{
+		card.classList.remove('active')
+		this.classList.add('active')
+
+	})
+}
+card.forEach(card =>card.addEventListener('click', showCard))

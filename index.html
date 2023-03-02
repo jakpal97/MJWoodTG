@@ -27,7 +27,7 @@
             <ul class="menu">
                 <li><a class="link" href='#aboutUs'>O NAS</a></li>
                 <li><a class="link" href='#offer'>OFERTA</a></li>
-                <li><a class="link" href="#">HURTOWNIA</a></li>
+                <li><a class="link" href="#hurt">HURTOWNIA</a></li>
                 <li><a class="link" href="#contact">KONTAKT</a></li>
             </ul>
 
@@ -96,50 +96,65 @@
 
             </div>
         </div>
-        <div class="wrapper">
-            <div class="card spring active" data-season="spring">
-                <div class='text'>
-                    <h4>spring</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="hurt" id="hurt">
+            <div class="hurtInfo">
+                <h3>HURTOWNIA</h3>
+                <p class="hurtP">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis nulla pariatur, eius
+                    praesentium quo recusandae repellendus reprehenderit animi molestias nobis dolorum cupiditate,
+                    facere
+                    incidunt non? Est animi quaerat ad ex.
+                </p>
+            </div>
+            <div class="wrapper">
+                <div class="card spring active" data-season="spring">
+                    <div class='text'>
+                        <h4>deska heblowana</h4>
+                        <p> opis deski pierwszej</p>
+                    </div>
+                </div>
+                <div class="card summer" data-season="summer">
+                    <div class='text'>
+                        <h4>deska sezonowa </h4>
+                        <p> opis deski drugiej</p>
+                    </div>
+                </div>
+                <div class="card autumn" data-season="autumn">
+                    <div class='text'>
+                        <h4>zajebista deska</h4>
+                        <p>oopis desi trzeciej</p>
+                    </div>
+                </div>
+                <div class="card winter" data-season="winter">
+                    <div class='text'>
+                        <h4>super deska </h4>
+                        <p> opis deski czwartej</p>
+                    </div>
                 </div>
             </div>
-            <div class="card summer" data-season="summer">
-                <div class='text'>
-                    <h4>spring</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card autumn" data-season="autumn">
-                <div class='text'>
-                    <h4>spring</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                </div>
-            </div>
-            <div class="card winter" data-season="winter">
-                <div class='text'>
-                    <h4>spring</h4>
-                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                </div>
-            </div>
-
-
-
         </div>
         <div class="contact">
-            <h4 id="contact" class="contaktHeader">KONTAKT</h4>
+            <h5 id="contact" class="contaktHeader">KONTAKT</h5>
             <p class="contactP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, amet.</p>
-            <form action="send_email.php" method="post">
-                <label for="name">Imię i nazwisko:</label>
-                <input type="text" id="name" name="name">
+            <div class="infoMap">
+                <form action="send_email.php" method="post">
+                    <label for="name">Imię i nazwisko:</label>
+                    <input type="text" id="name" name="name">
 
-                <label for="email">Adres email:</label>
-                <input class="emailInput" type="email" id="email" name="email">
+                    <label for="email">Adres email:</label>
+                    <input class="emailInput" type="email" id="email" name="email">
 
-                <label for="message">Wiadomość:</label>
-                <textarea id="message" name="message"></textarea>
+                    <label for="message">Wiadomość:</label>
+                    <textarea id="message" name="message"></textarea>
 
-                <input class="sendBtn" type="submit" value="Wyślij">
-            </form>
+                    <input class="sendBtn" type="submit" value="Wyślij">
+                </form>
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.5838351502666!2d18.798821115678678!3d50.46747387947769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471129ca8f7506ef%3A0x5c00cddb120fa38c!2sTo%C5%82stoja%209%2C%2042-680%20Tarnowskie%20G%C3%B3ry!5e0!3m2!1spl!2spl!4v1677788304655!5m2!1spl!2spl"
+                    width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
         </div>
 
 
