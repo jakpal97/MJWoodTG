@@ -329,6 +329,9 @@
 	.hurt {
 		display: none;
 	}
+	iframe {
+		display: none;
+	}
 }
 @media (min-width: 390px) {
 	body {
@@ -774,5 +777,32 @@
 	iframe {
 		width: 50%;
 		height: 400px;
+	}
+	.footer {
+		background-color: var(--color-three);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 100px;
+	}
+	.footerNav ul {
+		list-style: none;
+		padding: 15px 15px;
+	}
+	.footerLinks {
+		text-decoration: none;
+		color: var(--color-four);
+		font-size: 1rem;
+	}
+	.footerLinks:hover {
+		color: var(--color-two);
+	}
+	.fa-brands {
+		color: var(--color-four);
+		font-size: 3.5rem;
+		padding: 15px;
+	}
+	.fa-brands:hover {
+		transform: scale(1.2, 1.2);
 	}
 }
