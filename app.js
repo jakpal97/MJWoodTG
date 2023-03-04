@@ -1,3 +1,5 @@
+// // Burger menu
+
 const burgerBtn = document.querySelector('.burger')
 const barsIco = document.querySelector('.fa-bars')
 const xIco = document.querySelector('.fa-times')
@@ -16,6 +18,9 @@ const navLinks = document.querySelectorAll('nav ul li a')
 navLinks.forEach(link => {
 	link.addEventListener('click', handleNav)
 })
+
+// ---------------------------------------------------------------------------------
+// Carousel
 
 const sliderBox = document.querySelector('.slider-box')
 const leftBtn = document.querySelector('.btn-left')
@@ -71,6 +76,9 @@ window.onload = function () {
 	changeImage()
 }
 
+// --------------------------------------------------
+// Finger slice function
+
 let hammer = new Hammer(sliderBox)
 hammer.on('swipeleft', function () {
 	let currentSlide = document.querySelector('.slider-img')
@@ -108,29 +116,32 @@ window.onscroll = function () {
 		navbar.classList.remove('sticky')
 	}
 }
+// ------------------------------------------------------------------------------
 
-const header = document.querySelector(".headerInfo");
-const images = ["../images/header2.jpg", "../images/header3.jpg" ];
+// Carousel header
+const isMobile = window.matchMedia('(max-width: 600px)').matches
 
-let i = 0;
-setInterval(() => {
-  header.style.backgroundImage = `url(images/${images[i]})`;
-  i = (i + 1) % images.length;
-}, 5000);
+if (!isMobile) {
+	const header = document.querySelector('.headerInfo')
+	const images = ['../images/header2.jpg', '../images/header3.jpg']
 
+	let i = 0
+	setInterval(() => {
+		header.style.backgroundImage = `url(images/${images[i]})`
+		i = (i + 1) % images.length
+	}, 5000)
+}
 
+// -----------------------------------------------
 
+//kod do hurtowni
 
+const card = document.querySelectorAll('.card')
 
-// kod do desek
-
-const card= document.querySelectorAll('.card')
-
-function showCard(){
-	card.forEach(card=>{
+function showCard() {
+	card.forEach(card => {
 		card.classList.remove('active')
 		this.classList.add('active')
-
 	})
 }
-card.forEach(card =>card.addEventListener('click', showCard))
+card.forEach(card => card.addEventListener('click', showCard))
