@@ -147,7 +147,6 @@
 	.slider {
 		height: 22.5625rem;
 		width: 100%;
-
 		position: relative;
 		left: 0%;
 		top: -1.5%;
@@ -160,7 +159,6 @@
 		display: flex;
 		transform: translateX(0);
 		transition: transform 0.6s;
-		/* max-width: fit-content; */
 	}
 	.slider-img {
 		width: 100%;
@@ -171,7 +169,6 @@
 		position: absolute;
 		top: 40%;
 		transform: translateY(-40%);
-
 		padding: 0.1em 0.5em;
 		color: var(--color-one);
 		background-color: var(--color-four);
@@ -316,7 +313,6 @@
 		color: var(--color-four);
 		list-style-type: none;
 	}
-
 	.references {
 		gap: 10px;
 		display: flex;
@@ -326,6 +322,7 @@
 	.fa-brands {
 		font-size: 2.5rem;
 		color: var(--color-four);
+		padding-bottom: 10px;
 	}
 	.fa-brands:hover {
 		transform: scale(1.2, 1.2);
@@ -342,6 +339,53 @@
 	.contactInfo {
 		display: none;
 	}
+	.contactInfoFooter {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2rem;
+		font-weight: 800;
+		color: var(--color-four);
+	}
+	.contackHour::before {
+		content: '\f017';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contactPhone::before {
+		content: '\f095';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contactPhone {
+		padding-top: 8px;
+	}
+	.contacktMail::before {
+		content: '\f0e0';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contacktMail {
+		padding: 8px 0;
+	}
+	.contactAdress::before {
+		content: '\f3c5';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.partners{
+		display: none;
+	}
+	
 }
 @media (min-width: 600px) {
 	body {
@@ -381,14 +425,11 @@
 	.link:hover {
 		color: var(--color-two);
 	}
-	.logo {
-		mix-blend-mode: color-burn;
-	}
 	nav.sticky {
 		position: fixed;
 		top: 0;
 		left: 0;
-		padding: 10px 8%;
+		padding: 5px 8%;
 		background-color: var(--color-four);
 		width: 100%;
 		display: flex;
@@ -411,19 +452,12 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
-		background-image: url('../images/header1.jpg');
+		background-image: url('../images/header1-min.jpg');
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
-	.menu li::before {
-		content: '\f1bb';
-		font-family: 'Font Awesome 5 Free';
-		font-size: 1.5rem;
 
-		padding-right: 8px;
-		color: var(--color-three);
-	}
 	h1 {
 		font-size: 5rem;
 		font-weight: 800;
@@ -470,7 +504,6 @@
 		width: 1300px;
 		padding: 15px 20px;
 		border-radius: 40px;
-		/* z-index: 2; */
 	}
 	h2 {
 		font-size: 3rem;
@@ -498,7 +531,7 @@
 		border-radius: 50px;
 		position: absolute;
 		right: 20px;
-		bottom: -850px;
+		bottom: -550px;
 		z-index: -1;
 	}
 
@@ -528,7 +561,7 @@
 		border-radius: 50px;
 		position: absolute;
 		left: 0;
-		top: 40%;
+		top: 30%;
 		z-index: 0;
 	}
 	.slider {
@@ -539,7 +572,6 @@
 		top: -1.5%;
 		overflow: hidden;
 		margin-right: 0%;
-
 		border-radius: 20px;
 	}
 	.slider-box {
@@ -594,7 +626,7 @@
 	.wrapper {
 		display: flex;
 		padding: 0.5em;
-		width: 1200px;
+		width: 1400px;
 		background-color: var(--color-two);
 		border-radius: 10px;
 		box-shadow: 10px 10px 10px var(--color-three);
@@ -620,18 +652,26 @@
 		transition: opacity 0.5s;
 	}
 	.spring {
-		background-image: url('../images/deska1.jpg');
+		background-image: url('../images/deska1-min.jpg');
 	}
 	.summer {
-		background-image: url('../images/deska2.jpg');
+		background-image: url('../images/deska2-min.jpg');
 	}
 	.autumn {
-		background-image: url('../images/deska3.jpg');
+		background-image: url('../images/deska3-min.jpg');
 	}
 	.winter {
-		background-image: url('../images/deska4.jpg');
+		background-image: url('../images/deska4-min.jpg');
+	}
+	.deska {
+		background-image: url('../images/deska5-min.jpg');
+	}
+	.deska2 {
+		background-image: url('../images/deska6-min.jpg');
 	}
 	.spring::before,
+	.deska2::before,
+	.deska::before,
 	.summer::before,
 	.autumn::before,
 	.winter::before {
@@ -643,7 +683,6 @@
 		height: 100%;
 		opacity: 0.5;
 	}
-
 	.text {
 		position: absolute;
 		left: 50%;
@@ -663,11 +702,11 @@
 		display: none;
 		opacity: 0;
 		font-size: 1rem;
+		color: var(--color-four);
 	}
 	.active {
 		flex-grow: 8;
 	}
-
 	.active .text {
 		animation: show-bg 1s 0.4s forwards;
 	}
@@ -751,7 +790,6 @@
 	form {
 		padding-top: 10px;
 	}
-
 	input[type='text'],
 	textarea,
 	.emailInput {
@@ -796,10 +834,6 @@
 	textarea {
 		height: 150px;
 	}
-	/* iframe {
-		width: 50%;
-		height: 400px;
-	} */
 	.footer {
 		background-color: var(--color-three);
 		display: flex;
@@ -828,24 +862,78 @@
 	}
 	.contactDiv {
 		display: flex;
-		flex-direction: column;
+		gap: 10px;
 		justify-content: center;
 		align-items: center;
+		padding-top: 7px;
 	}
 	.contactInfo {
 		padding: 10px 0;
 	}
-	.contactInfo li {
-		text-decoration: none;
-		font-size: 1rem;
+	.contactInfo {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.2rem;
 		font-weight: 800;
-		list-style: none;
 		color: var(--color-four);
 	}
-	.contactInfo li::before {
-		content: '\f1bb';
+	.contackHour::before {
+		content: '\f017';
+		font-size: 1.5rem;
 		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contactPhone::before {
+		content: '\f095';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contacktMail::before {
+		content: '\f0e0';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contactAdress::before {
+		content: '\f3c5';
+		font-size: 1.5rem;
+		font-family: 'Font Awesome 5 Free';
+		color: var(--color-four);
+		padding-right: 8px;
+	}
+	.contacktMail {
+		padding: 8px 0;
+	}
+	.contactPhone {
+		padding-top: 8px;
+	}
+	.contactInfoFooter {
+		display: none;
+	}
+	.canopy {
+		width: 70px;
+		height: 70px;
+	}
+	.aloha {
+		width: 60px;
+		height: 60px;
+	}
+	.partners {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+	h6 {
 		font-size: 1rem;
-		padding-right: 5px;
+		color: var(--color-four);
+		padding-right: 20px;
 	}
 }

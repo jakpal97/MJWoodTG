@@ -123,7 +123,7 @@ const isMobile = window.matchMedia('(max-width: 600px)').matches
 
 if (!isMobile) {
 	const header = document.querySelector('.headerInfo')
-	const images = ['../images/header2.jpg', '../images/header3.jpg']
+	const images = ['../images/header2-min.jpg', '../images/header3-min.jpg', '../images/stolarz-min.jpg']
 
 	let i = 0
 	setInterval(() => {
