@@ -1,26 +1,20 @@
-#  MJWoodTG
+# MJWoodTG
+This repository contains the source code for the website of the woodworking company MJWoodTG. The website serves as a company's business card, presenting woodworking services, completed projects, and a wood sales offer.
 
-To repozytorium zawiera kod źródłowy strony internetowej firmy stolarskiej MJWoodTG. Strona ta służy jako wizytówka firmy, prezentując usługi stolarskie, wykonane projekty oraz ofertę sprzedaży drewna.
+## Technologies
+The website was built using the following technologies:
 
-## Technologie
++ HTML
++ CSS
++ JavaScript
 
-Strona została zbudowana przy użyciu następujących technologii:
+#Repository Structure
++ /css - a directory containing CSS files
++ index.js - a directory containing JavaScript files
++ /images - a directory containing images and graphics
++ index.html - the main HTML file of the website
 
-- HTML
-- CSS
-- JavaScript
-
-## Struktura repozytorium
-
-- `/css` - katalog zawierający pliki CSS
-- `index.js` - katalog zawierający pliki JavaScript
-- `/images` - katalog zawierający obrazy i grafiki
-- `index.html` - główny plik HTML strony
-
-## Uruchomienie
-
-Aby uruchomić tę stronę lokalnie, wykonaj następujące kroki:
-
-1. Sklonuj to repozytorium na swoje urządzenie.
-2. Otwórz plik `index.html` w dowolnej przeglądarce internetowej.
-
+# Running the Website
+To run this website locally, follow these steps:
+1 Clone this repository to your device.
+2 Open the index.html file in any web browser.
