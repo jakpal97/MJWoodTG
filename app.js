@@ -122,3 +122,18 @@ function showCard() {
 	})
 }
 card.forEach(card => card.addEventListener('click', showCard))
+
+
+
+// -----------timeline
+document.addEventListener('scroll', function() {
+	const components = document.querySelectorAll('.timeline__component');
+	components.forEach(function(component) {
+		const position = component.getBoundingClientRect().top;
+		const screenPosition = window.innerHeight / 1.2;
+
+		if(position < screenPosition) {
+			component.classList.add('timeline__component--visible');
+		}
+	});
+});
