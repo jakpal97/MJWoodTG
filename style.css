@@ -784,6 +784,7 @@ header nav a {
 		justify-content: center;
 		width: 1100px;
 		padding-bottom: 30px;
+		text-align: center;
 	}
 
 	h3 {
@@ -1025,5 +1026,7 @@ header nav a {
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
-	
+	.skladDrewna{
+		text-align: center;
+	}
 }
