@@ -1,26 +1,63 @@
-// // Burger menu
+let nextButton = document.getElementById('next')
+let prevButton = document.getElementById('prev')
+let carousel = document.querySelector('.carousel')
+let listHTML = document.querySelector('.carousel .list')
+let seeMoreButtons = document.querySelectorAll('.seeMore')
+let backButton = document.getElementById('back')
 
-const burgerBtn = document.querySelector('.burger')
-const barsIco = document.querySelector('.fa-bars')
-const xIco = document.querySelector('.fa-times')
-const nav = document.querySelector('nav ul')
+let unAcceppClick
+let autoSlideInterval
 
-const handleNav = () => {
-	nav.classList.toggle('active')
-	burgerBtn.classList.toggle('active')
-	barsIco.classList.toggle('hide')
-	xIco.classList.toggle('hide')
+const showSlider = type => {
+	nextButton.style.pointerEvents = 'none'
+	prevButton.style.pointerEvents = 'none'
+
+	carousel.classList.remove('next', 'prev')
+	let items = document.querySelectorAll('.carousel .list .item')
+	if (type === 'next') {
+		listHTML.appendChild(items[0])
+		carousel.classList.add('next')
+	} else {
+		listHTML.prepend(items[items.length - 1])
+		carousel.classList.add('prev')
+	}
+	clearTimeout(unAcceppClick)
+	unAcceppClick = setTimeout(() => {
+		nextButton.style.pointerEvents = 'auto'
+		prevButton.style.pointerEvents = 'auto'
+	}, 2000)
+
+	resetAutoSlide()
 }
-burgerBtn.addEventListener('click', handleNav)
 
-const navLinks = document.querySelectorAll('nav ul li a')
+const startAutoSlide = () => {
+	autoSlideInterval = setInterval(() => {
+		showSlider('next')
+	}, 3500)
+}
 
-navLinks.forEach(link => {
-	link.addEventListener('click', handleNav)
-})
+const resetAutoSlide = () => {
+	clearInterval(autoSlideInterval)
+	startAutoSlide()
+}
 
-// ---------------------------------------------------------------------------------
-// Carousel
+nextButton.onclick = function () {
+	showSlider('next')
+}
+prevButton.onclick = function () {
+	showSlider('prev')
+}
+
+startAutoSlide()
+// seeMoreButtons.forEach(button => {
+// 	button.onclick = function () {
+// 		carousel.classList.remove('next', 'prev')
+// 		carousel.classList.add('showDetail')
+// 	}
+// })
+// backButton.onclick = function () {
+// 	carousel.classList.remove('showDetail')
+// }
 
 const sliderBox = document.querySelector('.slider-box')
 const leftBtn = document.querySelector('.btn-left')
@@ -63,8 +100,8 @@ const resetInterwal = () => {
 	startCarousel = setInterval(handleCarouesl, carouselSpeed)
 }
 
-rightBtn.addEventListener('click', handleRightBtn)
-leftBtn.addEventListener('click', handleLeftBtn)
+// rightBtn.addEventListener('click', handleRightBtn)
+// leftBtn.addEventListener('click', handleLeftBtn)
 
 window.addEventListener('resize', function () {
 	carouselWidth = sliderBox.offsetWidth
@@ -76,72 +113,12 @@ window.onload = function () {
 	changeImage()
 }
 
-// --------------------------------------------------
-// Finger slice function
-
-let hammer = new Hammer(sliderBox)
-hammer.on('swipeleft', function () {
-	let currentSlide = document.querySelector('.slider-img')
-
-	let nextSlide = currentSlide.nextElementSibling
-
-	if (!nextSlide) {
-		nextSlide = document.querySelector('.slider-img:first-child')
-	}
-
-	currentSlide.classList.remove('active')
-	nextSlide.classList.add('active')
-})
-
-hammer.on('swiperight', function () {
-	let currentSlide = document.querySelector('.slider-img')
-
-	let prevSlide = currentSlide.previousElementSibling
-
-	if (!prevSlide) {
-		prevSlide = document.querySelector('.slider-img')
-	}
-
-	currentSlide.classList.remove('active')
-	prevSlide.classList.add('active')
-})
-
-const navbar = document.querySelector('.navBar')
-const menu = document.querySelector('.menu')
-
-window.onscroll = function () {
-	if (window.pageYOffset >= menu.offsetTop) {
-		navbar.classList.add('sticky')
-	} else {
-		navbar.classList.remove('sticky')
-	}
-}
-// ------------------------------------------------------------------------------
-
-// Carousel header
-const isMobile = window.matchMedia('(max-width: 600px)').matches
-
-if (!isMobile) {
-	const header = document.querySelector('.headerInfo')
-	const images = ['../images/header2-min.jpg', '../images/header3-min.jpg', '../images/stolarz-min.jpg']
-
-	let i = 0
-	setInterval(() => {
-		header.style.backgroundImage = `url(images/${images[i]})`
-		i = (i + 1) % images.length
-	}, 5000)
-}
-
-// -----------------------------------------------
-
-//kod do hurtowni
-
-const card = document.querySelectorAll('.card')
+const card = document.querySelectorAll('.cardy')
 
 function showCard() {
 	card.forEach(card => {
-		card.classList.remove('active')
-		this.classList.add('active')
+		card.classList.remove('activey')
+		this.classList.add('activey')
 	})
 }
 card.forEach(card => card.addEventListener('click', showCard))
